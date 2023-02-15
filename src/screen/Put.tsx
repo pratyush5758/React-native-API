@@ -1,8 +1,8 @@
 import {Alert, Button, StyleSheet} from 'react-native';
 import React from 'react';
-import Get from './src/screen/Get';
 
-const App = () => {
+
+const Put = () => {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const handlePost = async () => {
@@ -41,6 +41,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default Put;
 
 const styles = StyleSheet.create({});

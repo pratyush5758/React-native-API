@@ -1,33 +1,31 @@
-import {Alert, Button, StyleSheet} from 'react-native';
+import {Alert, Button, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Get from './src/screen/Get';
 
-const App = () => {
+
+const Post = () => {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const handlePost = async () => {
     setIsLoading(true);
     try {
       const responseInfo = await fetch(
-        `https://dummy.restapiexample.com/api/v1/update/21`,
+        `https://jsonplaceholder.typicode.com/posts`,
         {
-          method: 'PUT',
+          method: 'POST',
           // headers: {
           //   'Content-Type': 'application/json',
           //   Authorization: `Bearer ${token}`,
           // },
-          // body: JSON.stringify({
-          //   username: 'JohnDoe',
-          //   email: 'mailto:johndoe@example.com',
-          //   password: 'secretpassword',
-          // }),
+          body: JSON.stringify({
+            username: 'JohnDoe',
+            email: 'mailto:johndoe@example.com',
+            password: 'secretpassword',
+          }),
         },
       );
 
       console.log('responseInfo', responseInfo);
-      // responseInfo?.status === 201  && 
-      //   Alert.alert('Success', 'Successfully Creted.');
-        responseInfo?.status === 200  && 
+      responseInfo?.status === 201 &&
         Alert.alert('Success', 'Successfully Creted.');
     } catch (error) {
       console.log('handelPaymentResponseErr', error);
@@ -41,6 +39,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default Post;
 
 const styles = StyleSheet.create({});
