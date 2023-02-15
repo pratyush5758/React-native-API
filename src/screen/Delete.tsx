@@ -2,7 +2,7 @@ import {Alert, Button, StyleSheet} from 'react-native';
 import React from 'react';
 
 
-const App = () => {
+const Delete = () => {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const handlePost = async () => {
@@ -41,6 +41,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default Delete;
 
 const styles = StyleSheet.create({});
