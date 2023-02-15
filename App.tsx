@@ -3,6 +3,7 @@ import React from 'react'
 import useSWR from 'swr'
 const App = () => {
   
+  // ---- For Get ------ //
   const { data,error,isLoading,mutate } = useSWR('https://jsonplaceholder.typicode.com/users', (apiURL: string) => fetch(apiURL).then(res => res.json()))
 
   console.log('data',data)
