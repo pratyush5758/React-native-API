@@ -1,5 +1,6 @@
 import {Alert, Button, StyleSheet} from 'react-native';
 import React from 'react';
+import Get from './Get';
 
 
 const Delete = () => {
@@ -36,7 +37,7 @@ const Delete = () => {
     }
   };
   return (
-    // <Get/>
+    
     <Button title={isLoading ? 'Loading' : 'POST'} onPress={handlePost} />
   );
 };
